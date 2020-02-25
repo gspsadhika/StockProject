@@ -19,16 +19,18 @@ public class Company {
 	private String companyname;
 	private String ceo;
 	private String bod;
+	private String choosesector;	
 	private int turnover;
 	
 	
-	public Company(int id, String companyname, String ceo, String bod, int turnover) {
+	public Company(int id, String companyname, String ceo, String bod, int turnover, String choosesector) {
 		super();
 		this.id = id;
 		this.companyname = companyname;
 		this.ceo = ceo;
 		this.bod = bod;
 		this.turnover = turnover;
+		this.choosesector=choosesector;
 	}
 	public Company() {
 			}
@@ -62,11 +64,19 @@ public class Company {
 	public void setTurnover(int turnover) {
 		this.turnover = turnover;
 	}
+	public String getChoosesector() {
+		return choosesector;
+	}
+	public void setChoosesector(String choosesector) {
+		this.choosesector = choosesector;
+	}
 	@Override
 	public String toString() {
-		return "Company [id=" + id + ", companyname=" + companyname + ", ceo=" + ceo + ", bod=" + bod + ", turnover="
-				+ turnover + "]";
+		return "Company [id=" + id + ", companyname=" + companyname + ", ceo=" + ceo + ", bod=" + bod
+				+ ", choosesector=" + choosesector + ", turnover=" + turnover + "]";
 	}
+	
+	
 	
 	
 
