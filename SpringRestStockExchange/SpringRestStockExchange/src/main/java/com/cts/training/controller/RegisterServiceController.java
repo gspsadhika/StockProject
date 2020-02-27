@@ -75,4 +75,21 @@ public class RegisterServiceController {
 		
 		return "{\"reg\":\"ok\"}";
 	}
+	
+	@PutMapping(value="/register/activate")
+	public String updateEmail(@RequestBody String e)
+	{
+		String temp = e.split(":")[1];
+		String email=temp.split("\"")[1];
+		
+		Register user = rr.findByEmail(email);
+		if(user.getActive().equals("no")) {
+			user.setActive("yes");
+			rr.save(user);
+			return "{\"result\":\"1\"}";
+		}
+		else
+		return "{\"result\":\"0\"}";
+		
+	}
 }

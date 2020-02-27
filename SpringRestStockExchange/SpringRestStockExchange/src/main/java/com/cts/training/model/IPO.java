@@ -26,7 +26,6 @@ public class IPO implements Serializable {
 	private int totalnoofshares;
 	private String remarks;
 	
-
 	@Override
 	public String toString() {
 		return "IPO [id=" + id + ", companyname=" + companyname + ", stockexchange=" + stockexchange + ", price="
