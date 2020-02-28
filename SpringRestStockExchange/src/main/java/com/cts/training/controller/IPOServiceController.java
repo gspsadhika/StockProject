@@ -44,7 +44,7 @@ public class IPOServiceController {
 	}
 	
 	@RequestMapping(value="/ipo/{id}", method=RequestMethod.DELETE)
-	public void delete(@PathVariable("id") int id)
+	public void delete(@PathVariable int id)
 	{
 		ir.deleteById(id);
 	}
