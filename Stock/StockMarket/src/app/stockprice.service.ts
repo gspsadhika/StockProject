@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StockpriceService {
-  httpUrl='http://localhost:8080/stockexchange/';
+  httpUrl='http://localhost:8003/stockexchange/';
 
   stockexchanges=StockPrice;
 
@@ -22,14 +22,14 @@ saveStockPrice(stockexchanges : StockPrice): Observable<StockPrice>{
 }
 
 deleteStockPrice(id: number): Observable<StockPrice>{
-  return this.ht.delete(`http://localhost:8080/stockexchange/${id}`);
+  return this.ht.delete(`http://localhost:8003/stockexchange/${id}`);
 }
 
  updateStockPrice(stockexchanges:StockPrice):Observable<StockPrice>
  {
-   return this.ht.put(`http://localhost:8080/update-stockexchange`, stockexchanges);
+   return this.ht.put(`http://localhost:8003/update-stockexchange`, stockexchanges);
  }
  getStockById(id:number):Observable<StockPrice>{
-  return this.ht.get(`http://localhost:8080/stockexchange/${id}`);
+  return this.ht.get(`http://localhost:8003/stockexchange/${id}`);
 }
 }
