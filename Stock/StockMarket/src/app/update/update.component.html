@@ -1,0 +1,32 @@
+
+  <body>
+  
+    <form [formGroup]= "updateForm" novalidate class="form" >
+      <div class="container">
+        <h2>Update User Details</h2>
+        
+        <hr>
+      <label for="id"><b>ID</b></label>
+      <input type="number" class="form-control" formControleName="id" placeholder="Enter ID" name="id" id="id" required >
+     
+      <label for="email"><b>Email</b></label>
+      <input type="text" class="form-control" formControlName="email" placeholder="Enter Email" name="email" id="email" required/>
+  
+      <label for="password"><b>Password</b></label>
+      <input type="password" class="form-control" formControlName="password" placeholder="Enter Password" name="password" id="password" required/>
+  
+      <label for="confirmPassword"><b>Confirm Password</b></label>
+      <input type="password"class="form-control" formControlName="confirmPassword" placeholder="Repeat Password" name="confirmPassword" id= "confirmPassword" required>
+      
+      <label for="mobile"><b>Mobile</b></label>
+      <input type="number" class="form-control" formControlName= "mobile" placeholder="Enter Mobile" name="mobile" id="mobile" required>
+
+        <p>By creating an account you agree to our <a href="">Terms & Privacy</a>.</p>
+    
+        <button (click)="updateTheUser()" class="updatebtn btn btn-success" [disabled]="!updateForm">Update</button>
+        
+      </div>
+      
+    </form>
+    
+    </body>

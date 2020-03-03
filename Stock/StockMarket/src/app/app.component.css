@@ -1,0 +1,21 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:aliceblue;
+  color: black;
+  text-align: center;
+   }    
+
+h1 
+{
+     text-align: center;
+     margin-top: 50px;
+     padding: 3;
+     width: 100%;
+   }
+.nav-link 
+{ 
+color: white;
+}

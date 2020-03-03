@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 102,
+      "email": "gspsadhika@gmail.com",
+      "password": "sadhika",
+      "confirmPassword": "sadhika",
+      "mobile": 98989898
+    },
+    {
+      "id": 103,
+      "email": "sam@gmail.com",
+      "password": "cognizant",
+      "confirmPassword": "cognizant",
+      "mobile": 90909
+    }
+  ]
+}

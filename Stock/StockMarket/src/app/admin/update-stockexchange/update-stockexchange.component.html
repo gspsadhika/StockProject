@@ -1,0 +1,37 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <form [formGroup]="updatestockExchange" novalidate class="form-group border p-5 border-curved mt-5">
+            <div class="container" style="background-color: aliceblue;">
+            <p class="h1 text-muted text-uppercase text-center mb-4">Stock Exchange Details</p>
+            <hr>
+  
+            <label for="id"> ID</label>
+            <input type="number" class="form-control" placeholder="Enter ID" formControlName="id" name="id" id="id">
+  
+            <label for="choosestock"><b>Select Stock</b></label>
+            <select class="form-control" id="choosestock" name="choosestock" formControlName="choosestock">
+                      <option>BSE</option>
+                      <option>NSE</option>
+                  </select>    
+         
+              <label for="brief">Brief</label>
+              <textarea class="form-control mb-4" name="brief" id="brief" cols="30" rows="3" placeholder="Enter Brief about Stock"
+              formControlName="brief" name="brief" id="brief"></textarea>
+  
+              <label for="address"><b>Address</b></label>
+              <textarea class="form-control mb-4" name="address" id="address" cols="30" rows="3" placeholder="Enter Address"
+                formControlName="address" name="address" id="address"></textarea>
+             
+                  
+            <button class="btn btn-primary text-dark text-center form-control" (click)="updateStockExchange()" [disabled]="!updatestockExchange">Update Stock Exchange</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>

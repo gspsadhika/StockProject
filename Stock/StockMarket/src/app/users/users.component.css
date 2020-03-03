@@ -1,0 +1,14 @@
+.button{
+    background-color: grey;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+
+  .table{
+
+    border: 1px solid #ddd;
+    
+  }

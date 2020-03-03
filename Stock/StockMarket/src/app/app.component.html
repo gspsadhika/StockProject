@@ -1,0 +1,65 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<div class="container-fluid">
+  <div>
+  <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;color:black;opacity: 1.0; background-color: aliceblue;"> STOCK MARKET CHARTING </h1>
+  <hr>
+  </div>
+  
+  <div class="bg">
+  <nav class="navbar navbar-expand-sm bg-primary  ">
+
+    <ul class="navbar-nav">
+
+      <li class="nav-item">        
+          <a class="nav-link" routerLink="home" target="_self"><i class="fa fa-home"></i> HOME</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="admin" target="_self" ><i class="fa fa-group"></i>ADMIN</a>
+      </li>
+
+  
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login" target="_self"><i class= "fa fa-sign-in-alt"></i>LOGIN</a>
+      </li>  
+  
+      <li class= "nav-item">
+        <a class="nav-link" routerLink="userLand" target="_self"><i class= "fa fa-group-alt"></i> USER</a>
+      </li>
+  
+        <li class= "nav-item">
+            <a class="nav-link" routerLink="register" target="_self"><i class="fa fa-pencil-alt"></i>REGISTER</a>
+        </li>
+  
+         <li class="nav-item">
+          <a class="nav-link" routerLink="users">UserList</a>
+        </li> 
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ipos" target="_self">IPO List</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="companies" target="_self">Companies List</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="stockexchanges" target="_self">Stock Exchanges</a>
+        </li>
+
+        
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
+  
+  
+    <div class="footer">
+      <p> @CopyRightsReserved If you have any queries please feel free to contact us</p>
+      </div>
+  
+
+
+

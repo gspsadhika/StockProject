@@ -1,0 +1,14 @@
+{
+  "ipo" :[
+      {   "companyid":"number",
+          "companyname": "Maruti",
+          "stockexchange": "BSE",
+          "price": 50000,
+          "totalnoofshares":5000,
+          "remarks": "At high price"
+
+      }
+
+
+  ]
+}

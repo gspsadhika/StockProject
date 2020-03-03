@@ -1,0 +1,40 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>  
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <form [formGroup]="compareCompany" novalidate class="form-group border p-5 border-curved mt-5">
+            <div class="container" style="background-color: aliceblue;">
+            <p class="h2 text-uppercase text-center mb-4">COMPARE COMPANY</p>
+            <hr>
+            <label for="companyname">Company Name:</label>
+            <input type="text" class="form-control" placeholder="Name of Company" formContrlName="companyname" id="companyname"><br>
+         
+            
+              <label for="sector"> Select Stock Exchange:</label>
+            <select class="form-control " id="role">
+                <option>BSE <a href="BSE"></a></option>
+                <option>NSE<a href="NSE"></a></option>
+              </select>
+
+           
+            
+            <div>
+            <label for="datetime">From:</label><br>
+            <input class="form-control" type="datetime-local" name="datetime" id="datetime" formControlName="datetime">
+
+             <label for="datetime">To:</label><br>
+            <input class="form-control" type="datetime-local" name="datetime" id="datetime" formControlName="datetime">
+        
+             
+            </div><br><br>
+           
+            
+            <button class="btn btn-success form-control" (click)="submit()">GENERATE MAP</button>
+            </div>
+          </form>
+        </div>
+    </div>
+    </div>

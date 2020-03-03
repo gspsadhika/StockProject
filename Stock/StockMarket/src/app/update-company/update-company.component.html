@@ -1,0 +1,50 @@
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">   
+       <form [formGroup]= "updateCompanyForm" novalidate class="form-group border p-5 border-curved mt-5" >
+        <div class="container">  
+            <div class="form-group">
+                <label for="selectsector"><b>Select Sector</b></label>
+                <select class="form-control" id="selectsector" name="selectsector">
+                    <option>Banking</option>
+                    <option>Pharma</option>
+                    <option>IT</option>
+                </select>
+              </div>
+    <div>
+                <label for="id"><b>Id of the Company</b></label>
+                <input type="number" class="form-control" placeholder="ID of the Company" formControlName="id" name="id" id="id">
+      </div>        
+    
+     <div>
+     <label for="companyname"><b>Name of the Company</b></label>
+     <input type="text" class="form-control" placeholder="Name of Company" formControlName="companyname" name="companyname" id="companyname">
+     </div>
+
+
+     <div>
+     <label for="ceo"><b> Chief Executive Officer </b></label>
+     <input type="text" class="form-control" placeholder="CEO of Company" formControlName="ceo" name="ceo" id="ceo">
+     </div>
+
+     <div>
+     <label for="bod"> <b>Board of Director </b> </label>
+     <input type="text" class="form-control " placeholder="Board of Director of Company" formControlName="bod" name="bod" id="bod">
+     </div>
+     
+     <div>
+     <label for="turnover"><b> Company Turnover</b></label>
+     <input type="number" class="form-control" placeholder="Company Turnover" formControlName="turnover" name="turnover" id="turnover">
+
+     <button class="btn btn-primary text-dark text-center form-control" (click)="updateTheCompany()">Update Company</button>
+     </div>
+     
+     </div>
+     </form>
+    </div>
+    </div>
+    </div>
+
+    
