@@ -30,7 +30,7 @@ deleteUser(id: number): Observable<User>{
 
  updateUser(user:User):Observable<User>
  {
-   return this.ht.put(`http://localhost:8000/update`,user);
+   return this.ht.put(`http://localhost:8000/register`,user);
  }
  getUserById(id:number):Observable<User>
  {

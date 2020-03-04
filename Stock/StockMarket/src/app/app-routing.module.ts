@@ -22,6 +22,7 @@ import { CompaniesComponent } from './admin/companies/companies.component';
 import { StockexchangeComponent } from './admin/stockexchange/stockexchange.component';
 import { StockexchangesComponent } from './admin/stockexchanges/stockexchanges.component';
 import { UpdateStockexchangeComponent } from './admin/update-stockexchange/update-stockexchange.component';
+import { PageComponent } from './page/page.component';
 
 
 
@@ -36,10 +37,10 @@ const routes: Routes = [
  {path: "update", component:UpdateComponent},
  {path: "userLand", component:UserLandComponent},
  {path: "importdata", component:ImportdataComponent},
- {path:"companydetails", component:CompanydetailsComponent},
- {path: "importdata", component:ImportdataComponent},
+ {path:"admin/companydetails", component:CompanydetailsComponent},
+ {path: "admin/importdata", component:ImportdataComponent},
  
- {path: "ipo", component:IpoComponent},
+ {path: "admin/ipo", component:IpoComponent},
  {path: "compare", component:CompareComponent},
  {path: "comparesec", component:CompareSecComponent},
  {path:"ipos", component:IposComponent},
@@ -47,9 +48,10 @@ const routes: Routes = [
  {path:"update-company", component:UpdateCompanyComponent},
  {path:"activate", component:ActivateComponent},
  {path:"companies", component:CompaniesComponent},
- {path:"stockexchange", component:StockexchangeComponent},
+ {path:"admin/stockexchange", component:StockexchangeComponent},
  {path:"stockexchanges", component:StockexchangesComponent},
- {path:"update-stockexchange", component:UpdateStockexchangeComponent}
+ {path:"update-stockexchange", component:UpdateStockexchangeComponent},
+ {path:"page", component:PageComponent}
 
 ];
 

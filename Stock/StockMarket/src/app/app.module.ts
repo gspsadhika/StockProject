@@ -26,6 +26,7 @@ import { CompaniesComponent } from './admin/companies/companies.component';
 import { StockexchangeComponent } from './admin/stockexchange/stockexchange.component';
 import { UpdateStockexchangeComponent } from './admin/update-stockexchange/update-stockexchange.component';
 import { StockexchangesComponent } from './admin/stockexchanges/stockexchanges.component';
+import { PageComponent } from './page/page.component';
 
 
 
@@ -51,7 +52,8 @@ AppComponent,
     CompaniesComponent,
     StockexchangeComponent,
     UpdateStockexchangeComponent,
-    StockexchangesComponent
+    StockexchangesComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,

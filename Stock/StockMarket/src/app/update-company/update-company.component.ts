@@ -20,7 +20,7 @@ export class UpdateCompanyComponent implements OnInit {
     companyname:['', Validators.required],
     ceo:['', Validators.required],
     bod:['', Validators.required],
-    selectsector:['', Validators.required],
+    choosesector:['', Validators.required],
     turnover:['', Validators.required]
 
    });

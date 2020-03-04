@@ -8,14 +8,13 @@
   <form [formGroup]= "loginForm" novalidate class="form-group border p-3 border-curved mt-5" (ngSubmit)="submit()" >
 <div class="container" style="background-color: aliceblue;">
   <p class="h2 text-uppercase text-center mb-4">LOGIN</p>
-
   <hr>
-
 <div>   
   <label for="email"></label>
   <p><i class="fas fa-envelope fa-align-center fa-3x"></i>
   <input type="email" class="form-control mt-2" formControlName="email" placeholder="Enter Email" name="email" id= "email" required></p>   
 </div>
+
 <div>
   <label for="password"></label>
    <p><i class= "fas fa-key fa-3x"></i>
@@ -27,7 +26,7 @@
    
   <div class="" style="text-align: center;">
     <p class= "h6">New Users?</p>
-       <a href="register" style="font-style: bold">Register here</a>
+       <a routerLink="register" style="font-style: bold">Register here</a>
   </div>
 </div>
 </form>
