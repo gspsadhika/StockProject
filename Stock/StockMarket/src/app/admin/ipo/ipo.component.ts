@@ -14,7 +14,7 @@ export class IpoComponent implements OnInit {
 
   ngOnInit() {
     this.addipo=this.formBuilder.group({
-      companyid: [],
+      id: [],
       companyname:['', Validators.required],
       stockexchange:['',Validators.required],
       price:['',Validators.required],
