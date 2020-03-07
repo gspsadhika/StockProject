@@ -11,21 +11,26 @@ export class AdminComponent implements OnInit {
   constructor(private router:Router) { }
 
   moveto(){
-    this.router.navigate(['/admin/ipo']);
+    this.router.navigate(['/ipo']);
 
   }
   navigateto()
   {
-       this.router.navigate(['/admin/importdata'])
+       this.router.navigate(['/importdata'])
   }
 
   goto()
   {
-    this.router.navigate(['/admin/companydetails'])
+    this.router.navigate(['/companydetails'])
   }
   navigateTo()
   {
-    this.router.navigate(['/admin/stockexchange'])
+    this.router.navigate(['/stockexchange'])
+  }
+
+  goTo()
+  {
+    this.router.navigate(['/users'])
   }
 
   ngOnInit() {

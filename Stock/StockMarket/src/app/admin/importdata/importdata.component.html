@@ -8,6 +8,7 @@
           <div class="col-6">
                        
               <hr>
+<form [formGroup]= "excelUploadForm" (ngSubmit)= "uploadData()" novalidate class="form-group border p-3 border-curved mt-5" >
 <div class="card shadow text-dark bg-light mb-4">
     <p class="h4 card-header text-center">Import Excel Sheet</p>
     <div class="card-body bg-light">
@@ -17,7 +18,7 @@
             <div class="custom-file">
                 
 
-                <input type="file" class="custom-file-input" id="inputGroupFile">
+                <input type="file" class="custom-file-input" id="excelFileUpload" formControlName="excelFileUpload" name="excelFileUpload" (change)="onFileChange($event)">
                 <label class="custom-file-label" for="inputGroupFile">Choose file </label>
             </div>
             <div class="input-group-append">
@@ -26,6 +27,7 @@
         </div>
     </div>
 </div>
+</form>
 </div>
 </div>
   </div>

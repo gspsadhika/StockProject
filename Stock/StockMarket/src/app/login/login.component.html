@@ -10,9 +10,9 @@
   <p class="h2 text-uppercase text-center mb-4">LOGIN</p>
   <hr>
 <div>   
-  <label for="email"></label>
-  <p><i class="fas fa-envelope fa-align-center fa-3x"></i>
-  <input type="email" class="form-control mt-2" formControlName="email" placeholder="Enter Email" name="email" id= "email" required></p>   
+  <label for="username"></label>
+  <p><i class="fas fa-user-circle fa-align-center fa-3x"></i>
+  <input type="text" class="form-control mt-2" formControlName="username" placeholder="Enter User Name" name="username" id= "username" required></p>   
 </div>
 
 <div>
@@ -20,9 +20,8 @@
    <p><i class= "fas fa-key fa-3x"></i>
     <input type="password" class= "form-control mt-2" formControlName="password" placeholder="Enter Password" name="password" id="password" required></p>
 </div>
-     <button type="submit" class="registerbtn">Login</button>  <br>
+     <button type="submit" class="registerbtn" (click)="isValid()">Login</button>  <br>
 
-        <input type="checkbox" checked="unchecked" name="remember" id="remember"> Remember me <br>
    
   <div class="" style="text-align: center;">
     <p class= "h6">New Users?</p>

@@ -1,6 +1,6 @@
 <body>
-<div class="container-fluid" style="background-color:aliceblue;">
-  <h2 class="text-center mt-5 mb-3" style="font-family:Verdana, Geneva, Tahoma, sans-serif"> ADMIN</h2>
+<div class="container-fluid">
+  <h2 class="text-center mt-5 mb-3 bg-light" style="font-family:Verdana, Geneva, Tahoma, sans-serif"> ADMIN</h2>
   <hr>
   <div class="row mx-auto">
 
@@ -8,7 +8,7 @@
       <img src="./assets/img2.jpg" class="img-fluid card-img-top border p-3" alt="ipo">
       <div class="card-body text-center">
         <div class="row h-100">
-          <a routerLink="admin/ipo" class="btn btn-primary btn-block mt-auto align-self-end" (click)="moveto()">IPO </a>
+          <a routerLink="/ipo" class="btn btn-secondary btn-block mt-auto align-self-end" (click)="moveto()">IPO </a>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@
       <img src="./assets/img3.jpg" class="img-fluid card-img-top border p-3" alt="stock">
       <div class="card-body text-center">
         <div class="row h-80">
-        <a routerLink="admin/stockexchange" class="btn btn-primary btn-block mt-auto align-self-end" (click)="navigateTo()">Stock</a>
+        <a routerLink="/stockexchange" class="btn btn-secondary btn-block mt-auto align-self-end" (click)="navigateTo()">Stock</a>
       </div>
     </div>
     </div>
@@ -27,7 +27,7 @@
       <img src="/assets/img4.jpg" class="img-fluid card-img-top border p-3" alt="import">
       <div class="card-body text-center">
         <div class="row h-100">
-        <a routerLink="admin/importdata" class="btn btn-primary btn-block mt-auto align-self-end" (click)="navigateto()">Import Data</a>
+        <a routerLink="importdata" class="btn btn-secondary btn-block mt-auto align-self-end" (click)="navigateto()">Import Data</a>
         </div>
       </div>
     </div>
@@ -36,12 +36,20 @@
       <img src="/assets/img5.jpg" class="img-fluid card-img-top border p-3" alt="company">
       <div class="card-body text-center">
         <div class="row h-100">
-        <a routerLink="admin/companydetails" class="btn btn-primary btn-block mt-auto align-self-end" (click)="goto()">Company Details</a>
+        <a routerLink="companydetails" class="btn btn-secondary btn-block mt-auto align-self-end" (click)="goto()">Company Details</a>
        </div>
      </div>
     </div>
 
+    <div class="card mx-auto mt-5 mb-5" style="width:18rem;">
+      <img src="/assets/img13.jpg" class="img-fluid card-img-top border p-3" alt="users">
+      <div class="card-body text-center">
+        <div class="row h-100">
+        <a routerLink="users" class="btn btn-secondary btn-block mt-auto align-self-end" (click)="goTo()">Users List</a>
+       </div>
+     </div>
   </div>
+</div>
 </div>
 <hr>
 

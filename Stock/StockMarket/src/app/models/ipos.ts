@@ -5,6 +5,7 @@ export class IPO
     stockexchange:string;
     price:number;
     totalnoofshares:number;
+    opendatetime:string;
     remarks:string;
     
 }

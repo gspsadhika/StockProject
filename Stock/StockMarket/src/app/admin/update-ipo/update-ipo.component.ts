@@ -20,6 +20,7 @@ export class UpdateIpoComponent implements OnInit {
       stockexchange:['', Validators.required],
       price:['', Validators.required],
       totalnoofshares:['', Validators.required],
+      opendatetime:['', Validators.required],
       remarks:['', Validators.required]    
 
     });

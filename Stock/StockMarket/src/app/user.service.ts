@@ -44,5 +44,23 @@ deleteUser(id: number): Observable<User>{
  {
    return this.ht.put("http://localhost:8000/register/activate",obj)
  }
+LoggedIn()
+{
+  let user_id= localStorage.getItem('userId');
+  if(user_id == null){
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
+ isActivated(user:User)
+ {
+   if(user.active=="yes")
+   {
+     return true;
+   }
+ }
 
 }

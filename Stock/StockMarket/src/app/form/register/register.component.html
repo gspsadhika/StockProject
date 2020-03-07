@@ -3,13 +3,16 @@
       <div class="row">
          <div class="col-3"></div>
             <div class="col-6">
-  <form [formGroup]= "registerForm" (ngSubmit)= "onSubmit()" novalidate class="form-group border p-3 border-curved  mt-5" >
+  <form [formGroup]= "registerForm" (ngSubmit)= "onSubmit()" novalidate class="form-group border p-3 border-curved mt-5" >
     <div class="container" style="background-image: url('./assets/img8.jpg');">
       <h2 align="center">REGISTER</h2>
       <p align="center">Please fill in this form to create an account</p>
      <hr>
      <label for="id"><b>ID</b></label>
      <input type="number" class="form-control" formControleName="id" placeholder="Enter ID" name="id" id="id" required>
+
+     <label for="username"><b>Username</b></label>
+     <input type="text" class="form-control" formControleName="username" placeholder="Enter User Name" name="username" id="username" required>
 
       <label for="email"><b>Email</b></label>
       <input type="text" class="form-control" formControlName="email" placeholder="Enter Email" name="email" id="email" required>

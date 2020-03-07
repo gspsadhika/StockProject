@@ -27,6 +27,8 @@ import { StockexchangeComponent } from './admin/stockexchange/stockexchange.comp
 import { UpdateStockexchangeComponent } from './admin/update-stockexchange/update-stockexchange.component';
 import { StockexchangesComponent } from './admin/stockexchanges/stockexchanges.component';
 import { PageComponent } from './page/page.component';
+import { ChartsComponent } from './charts/charts.component';
+import {HighchartsChartComponent} from 'highcharts-angular';
 
 
 
@@ -53,14 +55,17 @@ AppComponent,
     StockexchangeComponent,
     UpdateStockexchangeComponent,
     StockexchangesComponent,
-    PageComponent
+    PageComponent,
+    ChartsComponent,
+    HighchartsChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

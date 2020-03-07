@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
  
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+body {
+
+    background-image: url("./assets/background.jpg");
+  
+    background-repeat: no-repeat;
+  
+    background-attachment: fixed;
+  
+    background-size:cover;
+  
+   }
+
 

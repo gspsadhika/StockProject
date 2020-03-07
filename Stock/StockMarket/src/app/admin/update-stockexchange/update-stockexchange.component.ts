@@ -16,7 +16,6 @@ export class UpdateStockexchangeComponent implements OnInit {
   ngOnInit() {
     this.updatestockExchange=this.formBuilder.group({
       id:[],
-      choosestock:['', Validators.required],
       brief:['', Validators.required],
       address:['', Validators.required]
       
