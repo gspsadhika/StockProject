@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "StockMarket"
+    }
+  },
+  "defaultProject": "StockMarket",
+  "cli": {
+    "analytics": false
+  }
 }

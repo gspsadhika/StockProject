@@ -2,9 +2,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
  </head>
  
- <div class="container-fluid"> 
+ <div class="container-fluid mb-3"> 
   <div> 
-   <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;color:black;opacity: 1.0; background-color: aliceblue;">STOCK MARKET CHARTING </h1>
+   <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;color:black;opacity: 1.0; background-color: aliceblue;"><i class="fa fa-globe"></i>STOCK MARKET CHARTING </h1>
  <hr> 
   </div> 
  
@@ -19,26 +19,13 @@
     <li class="nav-item mr-auto"> 
      <a class="nav-link" routerLink="home"><i class="fa fa-home"></i> HOME</a> 
     </li> 
+     
     <li class="nav-item"> 
-     <a class="nav-link" routerLink="admin"><i class="fa fa-group-alt"></i>ADMIN</a> 
+     <a class="nav-link" routerLink="login"><i class="fa fa-sign-in-alt"></i>LOGIN</a> 
     </li>
  
-    <li class="nav-item">
- 
-     <a class="nav-link" routerLink="userLand"><i class="fa fa-group-alt"></i> USER</a>
- 
-    </li>
- 
-    <li class="nav-item">
- 
-     <a class="nav-link" routerLink="login"><i class="fa fa-sign-in-alt"></i>LOGIN</a>
- 
-    </li>
- 
-    <li class="nav-item">
- 
-     <a class="nav-link" routerLink="register"><i class="fa fa-pencil-alt"></i>REGISTER</a>
- 
+    <li class="nav-item"> 
+     <a class="nav-link" routerLink="register"><i class="fa fa-pencil-alt"></i>REGISTER</a> 
     </li>
 
     <li class="nav-item">
@@ -53,46 +40,42 @@
 
 <router-outlet></router-outlet>
 
-<!-- <div class= "footer bg-dark"> 
-   <div class="row pd-0">
-     <div class="col-md-7">
-         <div class="row py-0">
-       <div class="col-sm-1 hidden-md-down">
-           <a class="bg-circle bg-light">
-             <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
-           </a>
-       </div>
-         <div class="col-sm-11 text-white">
-             <div><h4>Contact</h4>
-             <p><span class="header-font align-left">M</span>y<span class="header-font">w</span>website.com</p>
-             </div>
+<footer class="footer bg-dark d-inline-block">
+   <div class="row">
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-sm-5">
+          <a class="bg-circle bg-info mx-3" href="#">
+            <i class="fa fa-2x fa-fw fa-address-card"></i>
+          </a>        
+        <div class="col-sm-7 text-white mx-auto">
+            <h4>Contact</h4>
+        </div>     
+    </div>
+    </div>
+    </div>
+      <div class="col-md-7">
+      <div class="d-inline-block p-3 ">
 
-         </div>
-         </div>
-     </div>
-     <div class="col-md-5">
-       <div class="d-inline-block">
-         <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998">
-           <a href="https://www.facebook.com/"><i class="fab fa-2x fa-fw fa-facebook text-white"></i>
-         </a>
-         </div>
-         <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF">
-           <a href="https://twitter.com/">
-             <i class="fab fa-2x fa-fw fa-twitter text-white"></i></a>
-         </div>
+        <div class="bg-circle-outline d-inline-block">
+          <a href="https://www.facebook.com/" class="text-white">
+            <i class="fab fa-2x fa-fw fa-facebook"></i></a>
+        </div>
 
-         <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5">
-           <a href="https://www.linkedin.com/company/">
-             <i class="fab fa-2x fa-fw fa-linkedin text-white"></i></a>
-         </div>
-         <div class="bg-circle-outline d-inline-block" style="background-color:#d34836">
-           <a href="https://www.google.com/">
-             <i class="fab fa-2x fa-fw fa-google text-white"></i></a>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+        <div class="bg-circle-outline d-inline-block">
+          <a href="https://twitter.com/" class="text-white">
+            <i class="fab fa-2x fa-fw fa-twitter"></i></a>
+        </div>
+
+        <div class="bg-circle-outline d-inline-block">
+          <a href="https://www.linkedin.com/company/" class="text-white">
+            <i class="fab fa-2x fa-fw fa-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </footer>
 
 
-  -->
+       
