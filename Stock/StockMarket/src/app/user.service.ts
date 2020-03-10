@@ -57,7 +57,7 @@ LoggedIn()
 
  isActivated(user:User)
  {
-   if(user.active=="yes")
+   if(user.active==true)
    {
      return true;
    }

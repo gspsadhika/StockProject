@@ -6,6 +6,6 @@ export class User
     confirmPassword:String;
     mobile: number;
     regStatus:String;
-    active:string;
+    active:boolean;
     
 }
