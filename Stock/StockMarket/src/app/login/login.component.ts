@@ -3,6 +3,7 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 import { User } from '../models/user';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { AuthServiceService } from '../auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   users:User[];
   currentUser: User;  
 
-  constructor(private userService:UserService, private formBuilder:FormBuilder, private router:Router) { }
+  constructor(private userService:UserService, private formBuilder:FormBuilder, private router:Router, private authService: AuthServiceService) { }
 
   ngOnInit() {
 
@@ -25,19 +26,33 @@ export class LoginComponent implements OnInit {
 
     });
   
-      // this.userService.getAllUsers().subscribe(u => {
-      //   this.users=u;
-      // })
-  }
-  submit()
-  {
-    console.log(this.loginForm.value);
+      //  this.userService.getAllUsers().subscribe(u => {
+      //    this.users=u;
+      //  });
   }
 
-//   isValid()
-//   {
-//     let admin_userName="admin";
-//     let admin_password="admin";
+  // submit()
+  // {
+  //   console.log(this.loginForm.value);
+  // }
+
+ isValid()
+ {
+    let username = this.loginForm.controls.username.value;
+    let password = this.loginForm.controls.password.value;;
+    const result=this.authService.authenticate(username,password);
+    result.subscribe(data=>{
+    console.log(data);
+    if(data.userType= "ROLE_ADMIN")
+    {
+       this.router.navigate(['/admin'])
+      }
+    else{
+    this.router.navigate(['/userLand']); 
+  }
+  });
+}
+          
 //     let userName = this.loginForm.controls.username.value;
 //     let password = this.loginForm.controls.password.value;
 
@@ -77,5 +92,4 @@ export class LoginComponent implements OnInit {
 // }
 
 }
-
 

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { UserService } from './user.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { User } from './models/user';
 
 
 const url= "http://localhost:8765/user-service/login";
@@ -23,22 +24,23 @@ export class AuthServiceService {
 
     console.log("calling server")
     //send the request
+    console.log(authenticationToken);
+
     return this.http.get(url,{headers}).pipe(
-      map(successData => {
+      map((data: User) => {
         console.log("success")
         sessionStorage.setItem("username", username);
 
         //save the token
         sessionStorage.setItem("token", authenticationToken);
-        return successData;
+
+        sessionStorage.setItem("userType", data.userType? "admin":"user");
+        return data;
       }),
       //failure function
-      map(failureData => {
-        //console message
-        console.log("failure")
-        return failureData;
-      })
-      
+      map(error => {
+         return error;
+      })      
     );
   }
   getAuthenticationToken() {

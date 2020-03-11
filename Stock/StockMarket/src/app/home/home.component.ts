@@ -10,7 +10,10 @@ export class HomeComponent implements OnInit {
 
   constructor(private router:Router) { }
   
-
+  // navigateto()
+  // {
+  //      this.router.navigate(['/importdata'])
+  // }
   ngOnInit() {
   }
 

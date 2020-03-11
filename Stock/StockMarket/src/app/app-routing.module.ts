@@ -24,6 +24,7 @@ import { StockexchangesComponent } from './admin/stockexchanges/stockexchanges.c
 import { UpdateStockexchangeComponent } from './admin/update-stockexchange/update-stockexchange.component';
 import { PageComponent } from './page/page.component';
 import { ChartsComponent } from './charts/charts.component';
+import { AdminUserComponent } from './admin-user/admin-user.component';
 
 
 
@@ -40,8 +41,7 @@ const routes: Routes = [
  {path: "userLand", component:UserLandComponent},
  {path: "importdata", component:ImportdataComponent},
  {path:"companydetails", component:CompanydetailsComponent},
- {path: "admin/importdata", component:ImportdataComponent},
- 
+ {path: "admin/importdata", component:ImportdataComponent}, 
  {path: "ipo", component:IpoComponent},
  {path: "compare", component:CompareComponent},
  {path: "comparesec", component:CompareSecComponent},
@@ -55,6 +55,7 @@ const routes: Routes = [
  {path:"update-stockexchange", component:UpdateStockexchangeComponent},
  {path:"page", component:PageComponent},
  {path:"charts", component:ChartsComponent},
+ {path: "admin-user", component:AdminUserComponent}
 
 ];
 

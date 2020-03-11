@@ -36,13 +36,13 @@ deleteUser(id: number): Observable<User>{
  {
   return this.ht.get(`http://localhost:8000/register/${id}`);
  }
- reg(){
-   return this.ht.get("http://localhost:8000/reg");
- }
+//  reg(){
+//    return this.ht.get("http://localhost:8000/reg");
+//  }
 
  serActivation(obj)
  {
-   return this.ht.put("http://localhost:8000/register/activate",obj)
+   return this.ht.put("http://localhost:8000/activate",obj)
  }
 LoggedIn()
 {
@@ -60,6 +60,17 @@ LoggedIn()
    if(user.active==true)
    {
      return true;
+   }
+ }
+
+ isAdmin()
+ {
+   if(sessionStorage.getItem("userType")=="admin")
+   {
+     return true;
+   }
+   else {
+     return false;
    }
  }
 

@@ -6,7 +6,7 @@ import { RegisterComponent } from './form/register/register.component';
 import {ReactiveFormsModule, FormBuilder, FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserService } from './user.service';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
@@ -28,6 +28,10 @@ import { StockexchangesComponent } from './admin/stockexchanges/stockexchanges.c
 import { PageComponent } from './page/page.component';
 import { ChartsComponent } from './charts/charts.component';
 import {HighchartsChartComponent} from 'highcharts-angular';
+import { AdminsidenavComponent } from './adminsidenav/adminsidenav.component';
+import { HttpInterceptorService } from './http-interceptor.service';
+import { AdminUserComponent } from './admin-user/admin-user.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 
 
@@ -56,7 +60,10 @@ AppComponent,
     StockexchangesComponent,
     PageComponent,
     ChartsComponent,
-    HighchartsChartComponent
+    HighchartsChartComponent,
+    AdminsidenavComponent,
+    AdminUserComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +73,13 @@ AppComponent,
     FormsModule,
     
   ],
-  providers: [UserService],
+  providers: [UserService,
+  {
+provide: HTTP_INTERCEPTORS, 
+useClass: HttpInterceptorService,
+multi: true
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

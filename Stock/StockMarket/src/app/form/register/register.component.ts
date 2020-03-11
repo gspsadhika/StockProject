@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { UserService } from 'src/app/user.service';
 import { DefaultUrlSerializer } from '@angular/router';
+import { User } from 'src/app/models/user';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { DefaultUrlSerializer } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
+  users:User[]= [];
 
   constructor(private formBuilder: FormBuilder, private userService: UserService ) { }
 
@@ -24,6 +26,7 @@ export class RegisterComponent implements OnInit {
       mobile:['', Validators.required]    
 
     });
+    this.userService.getAllUsers().subscribe(u => {this.users=u;});
   }
   addUser()
   {
@@ -42,12 +45,22 @@ export class RegisterComponent implements OnInit {
         }
   });
 }  
+
+emailValid(mail : String){
+  for(let user of this.users){
+    if(user.email===mail){
+      return false;
+    }
+  }
+  return true;
+}
 onSubmit()
   {  
-  this.userService.reg().subscribe(data=>
-    {
-      console.log("coming status::::"+data.reg);
-    })
+//   this.userService.reg().subscribe(data=>
+//     {
+//       console.log("coming status::::"+data.reg);
+//     })
+console.log(this.registerForm.value);
   }
 }
   

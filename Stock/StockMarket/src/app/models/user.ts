@@ -7,5 +7,6 @@ export class User
     mobile: number;
     regStatus:String;
     active:boolean;
+    userType:String;
     
 }
