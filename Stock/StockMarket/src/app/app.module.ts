@@ -28,10 +28,13 @@ import { StockexchangesComponent } from './admin/stockexchanges/stockexchanges.c
 import { PageComponent } from './page/page.component';
 import { ChartsComponent } from './charts/charts.component';
 import {HighchartsChartComponent} from 'highcharts-angular';
-import { AdminsidenavComponent } from './adminsidenav/adminsidenav.component';
 import { HttpInterceptorService } from './http-interceptor.service';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { LogoutComponent } from './logout/logout.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UpdateprofileComponent } from './userprofile/updateprofile/updateprofile.component';
+import { ChangepasswordComponent } from './userprofile/changepassword/changepassword.component';
 
 
 
@@ -61,9 +64,12 @@ AppComponent,
     PageComponent,
     ChartsComponent,
     HighchartsChartComponent,
-    AdminsidenavComponent,
     AdminUserComponent,
-    ContactusComponent
+    ContactusComponent,
+    LogoutComponent,
+    UserprofileComponent,
+    UpdateprofileComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -2,12 +2,13 @@ import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StockPrice } from './models/stockexchange';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StockpriceService {
-  httpUrl='http://localhost:8003/stockexchange/';
+  httpUrl= environment.host + `stock-exchange-service/stockexchange/`
 
   stockexchanges=StockPrice;
 
@@ -18,18 +19,18 @@ export class StockpriceService {
 }
 
 saveStockPrice(stockexchanges : StockPrice): Observable<StockPrice>{
-  return this.ht.post(this.httpUrl , stockexchanges);
+  return this.ht.post(environment.host + `stock-exchange-service/stockexchange`, stockexchanges);
 }
 
 deleteStockPrice(id: number): Observable<StockPrice>{
-  return this.ht.delete(`http://localhost:8003/stockexchange/${id}`);
+  return this.ht.delete(environment.host + `stock-exchange-service/stockexchange/${id}`);
 }
 
  updateStockPrice(stockexchanges:StockPrice):Observable<StockPrice>
  {
-   return this.ht.put(`http://localhost:8003/update-stockexchange`, stockexchanges);
+   return this.ht.put(environment.host + `stock-exchange-service/update-stockexchange`, stockexchanges);
  }
  getStockById(id:number):Observable<StockPrice>{
-  return this.ht.get(`http://localhost:8003/stockexchange/${id}`);
+  return this.ht.get(environment.host + `stock-exchange-service/stockexchange/${id}`);
 }
 }

@@ -25,6 +25,10 @@ import { UpdateStockexchangeComponent } from './admin/update-stockexchange/updat
 import { PageComponent } from './page/page.component';
 import { ChartsComponent } from './charts/charts.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
+import { LogoutComponent } from './logout/logout.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UpdateprofileComponent } from './userprofile/updateprofile/updateprofile.component';
+import { ChangepasswordComponent } from './userprofile/changepassword/changepassword.component';
 
 
 
@@ -55,7 +59,11 @@ const routes: Routes = [
  {path:"update-stockexchange", component:UpdateStockexchangeComponent},
  {path:"page", component:PageComponent},
  {path:"charts", component:ChartsComponent},
- {path: "admin-user", component:AdminUserComponent}
+ {path: "admin-user", component:AdminUserComponent},
+ {path:"logout", component:LogoutComponent},
+ {path:"userprofile", component:UserprofileComponent},
+ {path:"updateprofile", component:UpdateprofileComponent},
+ {path:"changepassword", component:ChangepasswordComponent}
 
 ];
 

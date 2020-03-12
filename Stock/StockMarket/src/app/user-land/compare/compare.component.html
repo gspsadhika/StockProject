@@ -5,34 +5,36 @@
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <form [formGroup]="compareCompany" novalidate class="form-group border p-5 border-curved mt-5">
-            <div class="container" style="background-color: aliceblue;">
+          <form [formGroup] = "compareCompany" novalidate class="form-group border p-5 border-curved mt-5">
+            <div class="container" style="background-image: url('./assets/img8.jpg');">
             <p class="h2 text-uppercase text-center mb-4">COMPARE COMPANY</p>
             <hr>
-            <label for="companyname">Company Name:</label>
-            <input type="text" class="form-control" placeholder="Name of Company" formContrlName="companyname" id="companyname"><br>
-         
+            <label for="companyname"><b>Company Name: </b></label>
+            <input type="text" class="form-control" placeholder="Name of Company" formControlName="companyname" id="companyname">
+
+            <label for="comparetocompany"><b>Compare To Company: </b></label>
+            <input type="text" class="form-control" placeholder="Name of Company" formControlName="comparetocompany" id="comparetocompany">
             
-              <label for="sector"> Select Stock Exchange:</label>
-            <select class="form-control " id="role">
+            <label for="companycode"><b>Company Code:</b></label>
+            <input type="number" class="form-control" placeholder="Name of Company" formControlName="companycode" id="companycode">                              
+              
+            <label for="stock"><b>Select Stock Exchange:</b></label>
+            <select class="form-control " formControlName="stockexchange" id="stockexchange" name="stockexchange">
                 <option>BSE <a href="BSE"></a></option>
                 <option>NSE<a href="NSE"></a></option>
-              </select>
-
-           
+            </select>         
             
             <div>
-            <label for="datetime">From:</label><br>
+            <label for="datetime"><b>From:</b></label><br>
             <input class="form-control" type="datetime-local" name="datetime" id="datetime" formControlName="datetime">
 
-             <label for="datetime">To:</label><br>
-            <input class="form-control" type="datetime-local" name="datetime" id="datetime" formControlName="datetime">
-        
+             <label for="datetime"><b>To:</b></label><br>
+            <input class="form-control" type="datetime-local" name="datetime" id="datetime" formControlName="datetime">       
              
-            </div><br><br>
+            </div>
            
             
-            <button class="btn btn-success form-control" (click)="submit()">GENERATE MAP</button>
+            <button class="btn btn-success form-control" (click)="onSubmit()">GENERATE MAP</button>
             </div>
           </form>
         </div>

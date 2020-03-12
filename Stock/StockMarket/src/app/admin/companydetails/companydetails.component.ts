@@ -33,6 +33,7 @@ export class CompanydetailsComponent implements OnInit {
   addCompany(){
     this.companyService.saveCompany(this.companydetailsForm.value).subscribe(data =>{
      console.log('Company Inserted Successfully');
+   this.router.navigate(['/companies']);
      });
    }
 }

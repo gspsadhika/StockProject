@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-land',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserLandComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  navigateTo()
+  {
+    this.router.navigate(['/compare'])
+  }
+
+  moveTo()
+  {
+    this.router.navigate(['/comparesec'])
+  }
+
+  goTo()
+  {
+    this.router.navigate(['/userprofile'])
+  }
+
+
 
   ngOnInit() {
+  
+    
   }
+
 
 }

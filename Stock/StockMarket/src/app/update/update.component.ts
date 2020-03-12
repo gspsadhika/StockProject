@@ -17,12 +17,13 @@ export class UpdateComponent implements OnInit {
   ngOnInit() {
     
     this.updateForm=this.formBuilder.group({
-      id:[],
+      id:[''],
       username:['', Validators.required],
       email:['',[Validators.required,Validators.email]],
       password:['',Validators.required],
       confirmPassword:['',Validators.required],
-      mobile:['', Validators.required]
+      mobile:['', Validators.required],
+      active:[''] 
     });
     const id=localStorage.getItem('userId');
     if(+id>0){

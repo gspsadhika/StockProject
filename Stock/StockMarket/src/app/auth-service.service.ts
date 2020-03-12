@@ -3,9 +3,10 @@ import { UserService } from './user.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { User } from './models/user';
+import { environment } from 'src/environments/environment';
 
 
-const url= "http://localhost:8765/user-service/login";
+const url= environment.host + `user-service/login`;
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +24,7 @@ export class AuthServiceService {
     });
 
     console.log("calling server")
-    //send the request
+        //send the request
     console.log(authenticationToken);
 
     return this.http.get(url,{headers}).pipe(

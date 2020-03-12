@@ -22,14 +22,17 @@ export class LoginComponent implements OnInit {
 
     this.loginForm= this.formBuilder.group({
       username: ['',  Validators.required],
-      password:['', Validators.required]        
+      password:['', Validators.required],
+             
 
     });
   
-      //  this.userService.getAllUsers().subscribe(u => {
-      //    this.users=u;
-      //  });
+       this.userService.getAllUsers().subscribe(u => {
+          this.users=u;
+        });
+        
   }
+
 
   // submit()
   // {
@@ -38,12 +41,13 @@ export class LoginComponent implements OnInit {
 
  isValid()
  {
-    let username = this.loginForm.controls.username.value;
-    let password = this.loginForm.controls.password.value;;
-    const result=this.authService.authenticate(username,password);
-    result.subscribe(data=>{
+    let username = this.loginForm.get("username").value;
+    let password = this.loginForm.get("password").value;;
+    const result$ = this.authService.authenticate(username,password);
+    result$.subscribe(data=>{
+      sessionStorage.setItem('userId', data.id.toString());
     console.log(data);
-    if(data.userType= "ROLE_ADMIN")
+    if(data.userType == "ROLE_ADMIN")
     {
        this.router.navigate(['/admin'])
       }

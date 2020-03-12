@@ -4,25 +4,33 @@
 
   <div class="row mx-auto">
 
-
    <div class="card mt-5 mb-5 mx-auto" style="width: 18rem;">
     <img src="./assets/img6.jpg" class="card-img-top border p-3" alt="ipo">
       <div class="card-body text-center"> 
         <div class="row h-100">  
-       <a routerLink= "compare" class="btn btn-secondary btn-block mt-auto align-self-end">COMPARE COMPANY</a>
+       <a routerLink= "compare" class="btn btn-secondary btn-block mt-auto align-self-end" (click)="navigateTo()">COMPARE COMPANY</a>
         </div>
       </div>
   </div>
 
 
 <div class="card mx-auto mt-5 mb-5" style="width:18rem;">
-  <img src="./assets/img7.jpg" class="card-img-top border p-3" alt="stock">
+  <img src="./assets/img7.jpg" class="card-img-top border p-3" alt="user">
    <div class="card-body text-center"> 
      <div class="row h-100">    
-     <a routerLink="compare-sec" class="btn btn-secondary btn-block mt-auto align-self-end">COMPARE SECTOR</a>
+     <a routerLink="comparesec" class="btn btn-secondary btn-block mt-auto align-self-end" (click)="moveTo()">COMPARE SECTOR</a>
      </div>
    </div>
 </div>
+
+<div class="card mx-auto mt-5 mb-5" style="width:18rem;">
+  <img src="./assets/img13.jpg" class="card-img-top border p-3" alt="stock">
+   <div class="card-body text-center"> 
+     <div class="row h-100">    
+     <a routerLink="userprofile" class="btn btn-secondary btn-block mt-auto align-self-end" (click)="goTo()">USER PROFILE</a>
+     </div>
+   </div>
+</div> 
 </div>
 </div>
 

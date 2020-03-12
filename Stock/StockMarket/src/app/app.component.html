@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">  
  </head>
  
- <div class="container-fluid mb-3 mx-auto">  
+ <div class="container-fluid">  
  
   <nav class="navbar navbar-expand-md navbar-dark bg-dark"> 
    <a class="navbar-brand" href="#">
@@ -27,7 +27,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" routerLink="login"><i class="fa fa-sign-out-alt"></i>LOGOUT</a>
+      <a class="nav-link" routerLink="logout"><i class="fa fa-sign-out-alt"></i>LOGOUT</a>
     </li>
 
     </ul>
@@ -39,12 +39,9 @@
    </div> 
  </div>
 
-<body> <router-outlet></router-outlet> </body>
+<router-outlet></router-outlet>
 
-
-
- 
- <footer class="footer font-small blue-grey lighten-5">
+ <div class="footer font-small blue-grey lighten-5">
 
   <div style="background-color: whitesmoke">
     <div class="container">

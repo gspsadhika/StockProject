@@ -2,13 +2,14 @@ import { Injectable, Inject } from '@angular/core';
 import { User } from './models/user';
 import { Observable } from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  httpUrl='http://localhost:8000/register/';
+  httpUrl = environment.host + `user-service/register/`;
 
   users = User;
  
@@ -22,19 +23,19 @@ getAllUsers() : Observable<User[]>
 }
 
 saveUser(user : User){
-  return this.ht.post(this.httpUrl , user);
+  return this.ht.post( environment.host + `user-service/register/`, user);
 }
 deleteUser(id: number): Observable<User>{
-  return this.ht.delete(`http://localhost:8000/register/${id}`);
+  return this.ht.delete(environment.host + `user-service/register/${id}`);
 }
 
  updateUser(user:User):Observable<User>
  {
-   return this.ht.put(`http://localhost:8000/register`,user);
+   return this.ht.put(environment.host + `user-service/register/`,user);
  }
  getUserById(id:number):Observable<User>
  {
-  return this.ht.get(`http://localhost:8000/register/${id}`);
+  return this.ht.get(environment.host + `user-service/register/${id}`);
  }
 //  reg(){
 //    return this.ht.get("http://localhost:8000/reg");
@@ -42,7 +43,7 @@ deleteUser(id: number): Observable<User>{
 
  serActivation(obj)
  {
-   return this.ht.put("http://localhost:8000/activate",obj)
+   return this.ht.put(environment.host + `user-service/activate`,obj)
  }
 LoggedIn()
 {
