@@ -1,37 +1,36 @@
 <div class="p-4">
-    <div id="body" class="container mt-5">
+    <div class="container mt-5" style="background: transparent;">
       <div class="row">
           <div class="col-3"></div>
           <div class="col-6">
-        <form [formGroup]="updateProfileForm"  class="form-group border p-5 border-rounded pb-0  mb-5 bg-light">
+        <form [formGroup]="updateProfileForm"  class="form-group border p-5 border-curved mt-5">
+          <div class="container" style="background-image: url('./assets/img8.jpg');">
         
-              <h1 class="text-muted text-uppercase text-center mb-3"> Update Details</h1>
-              <div class="form-group">
+          <p class="h1 text-uppercase text-center mb-4">UPDATE DETAILS</p>
+              <hr>
             
-                  <label for="username">Username:</label>
+                  <label for="username"><b>Username:</b></label>
                   <input type="text"  class="form-control" placeholder="enter username" formControlName="username" id="username" name="username">
-              </div>
+              
               <div>
-                  <label for="email">Email ID :</label>
+                  <label for="email"><b>Email ID :</b></label>
                   <input type="text"  class="form-control" placeholder="enter valid email id" formControlName="email" id="email" name="email">
                   <br>
-                  <label for="phone">Mobile:</label>
+                  <label for="phone"><b>Mobile:</b></label>
                   <input type="number" id="mobile" class="form-control" placeholder="enter valid Mobile" formControlName="mobile"  name="mobile">
                   <div class=" row text-center mt-3">
-                    <button class="btn btn-success mt-3 mx-auto" (click)="updateTheUser()" [disabled]="!updateProfileForm.valid" >Signin</button>
+                    <button class="btn btn-success mt-3 mx-auto" (click)="updateTheUser()" [disabled]="!updateProfileForm.valid" >Sign In</button>
                   </div>
             </div>
-            
+
+          </div>                   
           </form>
-          
+       </div>         
+      </div>
+    </div>
+</div>
     
-        </div>
-    </div>
-    </div>
-  </div>
-  <br>
-  <br><br>
-  <br>
+  
 
 
 

@@ -24,8 +24,15 @@ export class UserLandComponent implements OnInit {
   {
     this.router.navigate(['/userprofile'])
   }
+navigate()
+{
+  this.router.navigate(['/companieslist'])
+}
 
-
+navigateNow()
+{
+  this.router.navigate(['/iposlist'])
+}
 
   ngOnInit() {
   

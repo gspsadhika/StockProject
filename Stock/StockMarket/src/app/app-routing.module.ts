@@ -29,6 +29,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { UpdateprofileComponent } from './userprofile/updateprofile/updateprofile.component';
 import { ChangepasswordComponent } from './userprofile/changepassword/changepassword.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { CompanieslistComponent } from './user-land/companieslist/companieslist.component';
+import { IposlistComponent } from './user-land/iposlist/iposlist.component';
 
 
 
@@ -63,7 +66,10 @@ const routes: Routes = [
  {path:"logout", component:LogoutComponent},
  {path:"userprofile", component:UserprofileComponent},
  {path:"updateprofile", component:UpdateprofileComponent},
- {path:"changepassword", component:ChangepasswordComponent}
+ {path:"changepassword", component:ChangepasswordComponent},
+ {path:"contactus", component:ContactusComponent},
+ {path:"companieslist", component:CompanieslistComponent},
+ {path:"iposlist", component:IposlistComponent}
 
 ];
 

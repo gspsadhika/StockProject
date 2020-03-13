@@ -32,7 +32,15 @@ export class AdminComponent implements OnInit {
   {
     this.router.navigate(['/users'])
   }
+navigate()
+{
+  this.router.navigate(['/companies'])
+}
 
+navigateNow()
+{
+  this.router.navigate(['/ipos'])
+}
   ngOnInit() {
   
   }

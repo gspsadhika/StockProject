@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthServiceService } from './auth-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  userLoggedIn : boolean = false;
   title = 'StockMarket';
+  constructor(private authService: AuthServiceService){}
+
+  ngDoCheck()
+  {
+    this.userLoggedIn= this.authService.isUserLoggedIn();
+  }
 }

@@ -5,6 +5,8 @@
             <div class="col-6">   
        <form [formGroup]= "companydetailsForm" novalidate class="form-group border p-5 border-curved mt-5" (click)="submit()" >
         <div class="container" style="background-image: url('./assets/img8.jpg');" >  
+            <p class="h2 text-uppercase text-center mb-4">Company Details</p>
+            <hr>
           
           <label for="choosesector"><b>Select Sector</b></label>
           <select class="form-control" id="choosesector" name="choosesector" formControlName="choosesector">
@@ -12,34 +14,32 @@
               <option>Pharma</option>
               <option>IT</option>
           </select>
-        </div>
-        <div>
+        
             <label for="id"><b>Id of the Company</b></label>
             <input type="number" class="form-control" placeholder="ID of the Company" formControlName="id" name="id" id="id">
-        </div>
-     <div>
+     
      <label for="companyname"><b>Name of the Company</b></label>
      <input type="text" class="form-control" placeholder="Name of Company" formControlName="companyname" name="companyname" id="companyname">
-     </div>
+
+     <label for="companyCode"><b>Company Code</b></label>
+     <input type="text" class="form-control" placeholder="Company Code" formControlName="companyCode" name="companyCode" id="companyCode">
 
 
-     <div>
+     
      <label for="ceo"><b> Chief Executive Officer </b></label>
      <input type="text" class="form-control" placeholder="CEO of Company" formControlName="ceo" name="ceo" id="ceo">
-     </div>
+     
 
-     <div>
+     
      <label for="bod"> <b>Board of Director </b> </label>
      <input type="text" class="form-control " placeholder="Board of Director of Company" formControlName="bod" name="bod" id="bod">
-     </div>
      
-     <div>
      <label for="turnover"><b> Company Turnover</b></label>
      <input type="number" class="form-control" placeholder="Company Turnover" formControlName="turnover" name="turnover" id="turnover">
      <button class="btn btn-success text-dark text-center form-control" (click)="addCompany()">Add Company</button>
-     </div>
      
      
+        </div>
      </form>
     </div>
     </div>

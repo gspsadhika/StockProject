@@ -5,6 +5,7 @@
     <tr>
         <th> ID of the Company</th>
         <th> Name of the Company </th>
+        <th> Code of the Company</th>
         <th> Chief Executive Officer</th>
         <th> Board of Director</th>
         <th> Select Sector</th>
@@ -15,6 +16,7 @@
     <tr *ngFor="let company of companies">
         <td>{{company.id}}</td>
         <td>{{company.companyname}}</td>
+        <td>{{company.companyCode}}</td>
         <td>{{company.ceo}}</td>
         <td>{{company.bod}}</td>
         <td>{{company.choosesector}}</td>

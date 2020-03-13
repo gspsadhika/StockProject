@@ -35,7 +35,7 @@ export class AuthServiceService {
         //save the token
         sessionStorage.setItem("token", authenticationToken);
 
-        sessionStorage.setItem("userType", data.userType? "admin":"user");
+        sessionStorage.setItem("userType", data.userType === "ROLE_ADMIN"? "admin":"user");
         return data;
       }),
       //failure function

@@ -22,6 +22,7 @@ export class CompanydetailsComponent implements OnInit {
     this.companydetailsForm=this.formBuilder.group({
       id:['',Validators.required],
       companyname:['',Validators.required],
+      companyCode:['', Validators.required],
       turnover:['',Validators.required],
       ceo:['',Validators.required],
       choosesector:['',Validators.required],

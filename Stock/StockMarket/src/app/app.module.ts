@@ -35,6 +35,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { UpdateprofileComponent } from './userprofile/updateprofile/updateprofile.component';
 import { ChangepasswordComponent } from './userprofile/changepassword/changepassword.component';
+import { CompanieslistComponent } from './user-land/companieslist/companieslist.component';
+import { IposlistComponent } from './user-land/iposlist/iposlist.component';
+
 
 
 
@@ -69,7 +72,9 @@ AppComponent,
     LogoutComponent,
     UserprofileComponent,
     UpdateprofileComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    CompanieslistComponent,
+    IposlistComponent
   ],
   imports: [
     BrowserModule,

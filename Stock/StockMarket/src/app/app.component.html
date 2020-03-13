@@ -19,15 +19,15 @@
     </li> 
      
     <li class="nav-item"> 
-     <a class="nav-link" routerLink="login"><i class="fa fa-sign-in-alt"></i>LOGIN</a> 
-    </li>
- 
-    <li class="nav-item"> 
      <a class="nav-link" routerLink="register"><i class="fa fa-pencil-alt"></i>REGISTER</a> 
     </li>
 
+    <li class="nav-item"> 
+      <a class="nav-link" routerLink="login" *ngIf=!userLoggedIn><i class="fa fa-sign-in-alt"></i>LOGIN</a> 
+     </li>
+
     <li class="nav-item">
-      <a class="nav-link" routerLink="logout"><i class="fa fa-sign-out-alt"></i>LOGOUT</a>
+      <a class="nav-link" routerLink="logout" *ngIf="userLoggedIn"><i class="fa fa-sign-out-alt"></i>LOGOUT</a>
     </li>
 
     </ul>

@@ -18,6 +18,7 @@ export class UpdateCompanyComponent implements OnInit {
     this.updateCompanyForm=this.formBuilder.group({
     id:[''],
     companyname:['', Validators.required],
+    companyCode:['', Validators.required],
     ceo:['', Validators.required],
     bod:['', Validators.required],
     choosesector:['', Validators.required],

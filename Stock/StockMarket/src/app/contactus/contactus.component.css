@@ -1,0 +1,13 @@
+.contact {
+    background-color:lavender;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+.contact-pg {
+    padding: 10%;
+
+}

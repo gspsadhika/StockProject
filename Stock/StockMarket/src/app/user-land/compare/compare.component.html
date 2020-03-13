@@ -1,42 +1,67 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>  
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
-          <form [formGroup] = "compareCompany" novalidate class="form-group border p-5 border-curved mt-5">
-            <div class="container" style="background-image: url('./assets/img8.jpg');">
-            <p class="h2 text-uppercase text-center mb-4">COMPARE COMPANY</p>
-            <hr>
-            <label for="companyname"><b>Company Name: </b></label>
-            <input type="text" class="form-control" placeholder="Name of Company" formControlName="companyname" id="companyname">
 
-            <label for="comparetocompany"><b>Compare To Company: </b></label>
-            <input type="text" class="form-control" placeholder="Name of Company" formControlName="comparetocompany" id="comparetocompany">
-            
-            <label for="companycode"><b>Company Code:</b></label>
-            <input type="number" class="form-control" placeholder="Name of Company" formControlName="companycode" id="companycode">                              
-              
-            <label for="stock"><b>Select Stock Exchange:</b></label>
-            <select class="form-control " formControlName="stockexchange" id="stockexchange" name="stockexchange">
-                <option>BSE <a href="BSE"></a></option>
-                <option>NSE<a href="NSE"></a></option>
-            </select>         
-            
-            <div>
-            <label for="datetime"><b>From:</b></label><br>
-            <input class="form-control" type="datetime-local" name="datetime" id="datetime" formControlName="datetime">
-
-             <label for="datetime"><b>To:</b></label><br>
-            <input class="form-control" type="datetime-local" name="datetime" id="datetime" formControlName="datetime">       
-             
+<section id="intro">
+    <div class="container">
+      <div class="card bg-light w-52 h-100 mt-5 ">
+        <div class="card-body">
+          <h2>Comparison Charts</h2>
+          <form [formGroup]="compareCompany" (ngSubmit)="onSubmit()">
+            <div class="form-group" style="background-image:url('./assets/img8.jpg')">
+                <label for="Select Company/Sector"><b>Select Company</b></label>
+                <select class="form-control" id="Select" formControlName="csselect" name="csselect">
+                  <option>Company</option>
+                  
+                </select>
             </div>
-           
-            
-            <button class="btn btn-success form-control" (click)="onSubmit()">GENERATE MAP</button>
+            <div class="form-group">
+                <label for="Select stock exchange"><b>Select Stock Exchange</b></label>
+                <select class="form-control" id="Select" formControlName="seselect" name="seselect">
+                  <option>NSE</option>
+                  <option>BSE</option>
+                </select>
             </div>
-          </form>
+            <div class="form-group">
+              <label for="company code"><b>Company Code</b></label>
+              <select  class="form-control" id="cnsn" formControlName="cnsn" placeholder="Enter company(or) sector name"
+                name="cnsn" >
+                <option value=""selected disabled ><b>Select Company Code</b></option>
+                <option *ngFor="let company of companies"
+                [value]="">
+              {{company.companyCode}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="company name">Company Name</label>
+                <select class="form-control" id="ctcnsn" formControlName="ctcnsn" placeholder="Enter company(or) sector name Compare To"
+                  name="ctcnsn" >
+                  <option value="" selected disabled ><b>Select Company Name</b></option>
+                <option *ngFor="let company of companies"
+                [value]="">
+              {{company.companyname}}</option>
+                </select>
+              </div>
+            <div class="form-group row">
+                <label for="from period" class="col-2 col-form-label"><b>From Period</b></label>
+                <div class="col-10">
+                  <input class="form-control" type="date" value="" id="fperiod" formControlName="fperiod"  name="fperiod">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="from period" class="col-2 col-form-label"><b>To Period</b></label>
+                <div class="col-10">
+                  <input class="form-control" type="date" value="" id="tperiod" formControlName="tperiod"  name="fperiod">
+                </div>
+            </div>
+            <!-- <button type="submit" class="btn btn-info">Genrate Map</button> -->
+            <div class="intro-c ">
+                  <div class="text-center">
+                <button type="submit" class="btn btn-success">Generate Chart</button>
+                 </div>
+              </div>
+             </form>
         </div>
+      </div>
     </div>
-    </div>
+  </section>
