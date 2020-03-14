@@ -23,6 +23,13 @@ public class StockExchange implements Serializable {
 	private int id;
 	
 	private String brief;
+	private String choosestock;
+	public String getChoosestock() {
+		return choosestock;
+	}
+	public void setChoosestock(String choosestock) {
+		this.choosestock = choosestock;
+	}
 	private String address;
 	public int getId() {
 		return id;
@@ -45,13 +52,14 @@ public class StockExchange implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "StockExchange [id=" + id + ", brief=" + brief + ", address=" + address
+		return "StockExchange [id=" + id + ", brief=" + brief + ", choosestock=" + choosestock + ", address=" + address
 				+ "]";
 	}
-	public StockExchange(int id, String choosestock, String brief, String address) {
+	public StockExchange(int id,  String brief, String choosestock, String address) {
 		super();
 		this.id = id;
 		this.brief = brief;
+		this.choosestock=choosestock;
 		this.address = address;
 	}
 	public StockExchange()

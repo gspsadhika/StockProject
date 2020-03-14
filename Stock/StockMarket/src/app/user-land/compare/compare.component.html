@@ -9,12 +9,12 @@
           <h2>Comparison Charts</h2>
           <form [formGroup]="compareCompany" (ngSubmit)="onSubmit()">
             <div class="form-group" style="background-image:url('./assets/img8.jpg')">
-                <label for="Select Company/Sector"><b>Select Company</b></label>
+                <label for="Select Company/Sector"><b>Select to proceed</b></label>
                 <select class="form-control" id="Select" formControlName="csselect" name="csselect">
                   <option>Company</option>
                   
                 </select>
-            </div>
+            
             <div class="form-group">
                 <label for="Select stock exchange"><b>Select Stock Exchange</b></label>
                 <select class="form-control" id="Select" formControlName="seselect" name="seselect">
@@ -60,6 +60,7 @@
                 <button type="submit" class="btn btn-success">Generate Chart</button>
                  </div>
               </div>
+            </div>
              </form>
         </div>
       </div>

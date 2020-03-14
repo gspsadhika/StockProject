@@ -1,5 +1,8 @@
-.carousel-inner{
-    height: 400px;
-    
-    
-  }
+.container{
+  transition: transform 1s ease-out;
+  
+}
+
+.container:hover{
+  transform: scale(1.05);
+}

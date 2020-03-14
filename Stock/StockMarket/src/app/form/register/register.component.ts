@@ -11,6 +11,7 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  
   registerForm: FormGroup;
   users:User[]= [];
 
@@ -41,7 +42,7 @@ export class RegisterComponent implements OnInit {
         alert("Added New User");
         }
         else{
-          alert("ERROR");
+          alert("Welcome");
         }
   });
 }  

@@ -16,6 +16,7 @@ export class StockexchangeComponent implements OnInit {
   ngOnInit() {
     this.addstockExchange=this.formBuilder.group({
       id:['',Validators.required],
+      choosestock:['',Validators.required],
       brief:['', Validators.required],
       address:['',Validators.required],
       });
